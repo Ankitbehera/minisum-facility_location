@@ -498,7 +498,16 @@ with tab4:
             = \sum_{i=1}^{m} w_i \big[(x-a_i)^2 + (y-b_i)^2\big]
             """
         )
-
+        st.markdown("**Optimality condition (Centroid):**")
+        
+        st.latex(
+            r"""
+            x^* = \frac{\sum_{i=1}^{m} w_i a_i}{\sum_{i=1}^{m} w_i},
+            \qquad
+            y^* = \frac{\sum_{i=1}^{m} w_i b_i}{\sum_{i=1}^{m} w_i}
+            """
+        )
+        
         res_L2sq = slv.solve_single_facility_squared_euclidean(data)
 
         st.write(
@@ -519,6 +528,41 @@ with tab4:
             = \sum_{i=1}^{m} w_i \sqrt{(x-a_i)^2 + (y-b_i)^2}
             """
         )
+        st.markdown("**Initial point:**")
+        
+        st.latex(
+            r"""
+            x^{(0)} = \frac{\sum_{i=1}^{m} w_i a_i}{\sum_{i=1}^{m} w_i},
+            \qquad
+            y^{(0)} = \frac{\sum_{i=1}^{m} w_i b_i}{\sum_{i=1}^{m} w_i}
+            """
+        )
+        
+        st.markdown("**Weiszfeld iteration (k-th step):**")
+        
+        st.latex(
+            r"""
+            x^{(k)} =
+            \frac{\sum_{i=1}^{m} a_i \phi_i(x^{(k-1)},y^{(k-1)})}
+            {\sum_{i=1}^{m} \phi_i(x^{(k-1)},y^{(k-1)})}
+            """
+        )
+        
+        st.latex(
+            r"""
+            y^{(k)} =
+            \frac{\sum_{i=1}^{m} b_i \phi_i(x^{(k-1)},y^{(k-1)})}
+            {\sum_{i=1}^{m} \phi_i(x^{(k-1)},y^{(k-1)})}
+            """
+        )
+        
+        st.latex(
+            r"""
+            \phi_i(x,y) =
+            \frac{w_i}{\sqrt{(x-a_i)^2 + (y-b_i)^2}}
+            """
+        )
+
         show_iter = st.checkbox("Show iteration history")
 
         res_L2 = slv.solve_single_facility_euclidean(
