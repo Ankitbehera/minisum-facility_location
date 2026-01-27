@@ -651,4 +651,4 @@ with tab5:
 # Footer
 # --------------------------------------------------
 st.markdown("---")
-st.caption("Minisum Single Facility Location App — Streamlit")
+st.caption("Facility Location App by — Ankit Behera")
