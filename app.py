@@ -23,6 +23,7 @@ This app solves the **Minisum Single Facility Location Problem** using:
 - Rectilinear (L1) distance — *Median Method*
 - Euclidean (L2) distance — *Weiszfeld Method*
 - Squared Euclidean (L2²) distance — *Centroid*
+- Minkowski Distance Model (Lp) — *Gradient Descent*
 """
 )
 
