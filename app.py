@@ -461,14 +461,19 @@ with tab3:
                 x0, y0 = 10 * (i + 1), 10 * (i + 1)
 
             x = col1.number_input(
-                f"x{chr(65+i)}",
-                key=f"cx{i}",
-                value=x0
+                f"b{i+1}",
+                key=f"b{i}",
+                value=float(x0),
+                step=0.5,
+                format="%.2f"
             )
+
             y = col2.number_input(
-                f"y{chr(65+i)}",
-                key=f"cy{i}",
-                value=y0
+                f"b{i+1}",
+                key=f"b{i}",
+                value=float(y0),
+                step=0.5,
+                format="%.2f"
             )
 
             contour_points.append((x, y))
