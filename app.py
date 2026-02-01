@@ -70,7 +70,7 @@ elif page == "References":
 st.markdown("---")
 st.caption("Facility Layout and Design App by — Ankit Behera")
 st.caption(
-    "Course: Facility Layout and Design | "
+    #"Course: Facility Layout and Design | "
     "Department of Industrial & Systems Engineering | "
     "Indian Institute of Technology Kharagpur"
 )
